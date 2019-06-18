@@ -1,0 +1,10 @@
+/* 
+  File.strings
+  TheMovieDB
+
+  Created by Stefanny Toro Ramirez on 3/27/19.
+  Copyright © 2019 Globant. All rights reserved.
+*/
+
+"DecodingError" = "Decode Error";
+"Other error" = "Other error";

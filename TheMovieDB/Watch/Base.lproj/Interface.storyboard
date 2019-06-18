@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6Mu-8P-nWL">
+    <device id="watch40" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Movie-->
+        <scene sceneID="4k2-vd-u0o">
+            <objects>
+                <controller identifier="Movie" hidesWhenLoading="NO" id="vjS-Dc-iaO" customClass="MovieInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <group width="1" alignment="left" contentMode="scaleAspectFit" id="by1-Ji-wgs">
+                            <items>
+                                <imageView width="1" height="100" alignment="left" contentMode="scaleAspectFill" id="h6H-tn-CdA">
+                                    <color key="tintColor" red="0.67053414889999996" green="0.81938321329999997" blue="0.97409326419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" id="EWu-aQ-tVn">
+                            <items>
+                                <label width="1" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="i1v-6S-NAF">
+                                    <color key="textColor" red="0.0" green="0.87889331579999996" blue="0.50801855019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" contentMode="center" spacing="2" id="ZKI-ON-3AI">
+                            <items>
+                                <imageView width="20" height="20" alignment="left" image="highlightedStar" contentMode="scaleAspectFit" id="sSd-W1-xwb"/>
+                                <label height="1" alignment="center" text="Label" textAlignment="right" numberOfLines="0" id="mHm-xa-krJ"/>
+                            </items>
+                            <edgeInsets key="margins" left="36" right="36" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="movieImage" destination="h6H-tn-CdA" id="Ebv-eU-jvn"/>
+                        <outlet property="movieTitle" destination="i1v-6S-NAF" id="Z3f-6b-Kzf"/>
+                        <outlet property="movieVoteAverage" destination="mHm-xa-krJ" id="XZl-iy-6t7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="363" y="337"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="2dc-ce-IrY">
+            <objects>
+                <controller id="6Mu-8P-nWL">
+                    <items>
+                        <group width="1" height="120" alignment="left" id="vFv-vW-j4t">
+                            <items>
+                                <imageView width="1" height="1" alignment="left" image="themoviedb" contentMode="scaleAspectFill" id="Kgm-Yf-bjD"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="QTR-oH-Mil">
+                            <items>
+                                <button width="1" alignment="center" verticalAlignment="bottom" title="Recommend me!" id="YIP-eZ-ZtZ">
+                                    <color key="titleColor" red="0.0" green="0.87889331579999996" blue="0.50801855019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <segue destination="vjS-Dc-iaO" kind="modal" id="WLL-5S-JR2"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="133" y="337"/>
+        </scene>
+    </scenes>
+</document>
